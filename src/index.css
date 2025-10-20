@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 8%;
+    --foreground: 180 100% 95%;
+
+    --card: 220 22% 12%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 220 24% 10%;
+    --popover-foreground: 180 100% 95%;
+
+    --primary: 180 95% 55%;
+    --primary-foreground: 220 26% 8%;
+
+    --secondary: 270 70% 60%;
+    --secondary-foreground: 180 100% 95%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 180 30% 65%;
+
+    --accent: 180 95% 55%;
+    --accent-foreground: 220 26% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 180 100% 95%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 180 95% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradient colors */
+    --gradient-start: 220 26% 8%;
+    --gradient-mid: 220 30% 12%;
+    --gradient-end: 180 40% 15%;
+
+    /* Glow effects */
+    --glow-cyan: 180 95% 55%;
+    --glow-purple: 270 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)));
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(6, 182, 212, 0.4);
+  }
+}
