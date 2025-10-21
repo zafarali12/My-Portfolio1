@@ -3,16 +3,34 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+import AWS_BEDROCK from "../assets/AWS_BEDROCK.png";
+import CERTIFICATE from "../assets/CERTIFICATE.jpg";
+import Communication_skills from "../assets/Communication_skills.jpg";
+import CORVIT from "../assets/CORVIT.jpg";
+import dataanalytics_certificate from "../assets/dataanalytics_certificate.jpg";
+import datascience_certificate from "../assets/datascience_certificate.jpg";
+import fullstack_internship from "../assets/fullstack_internship.jpg";
+import javascipt_certificate from "../assets/javascipt certificate.png";
+
 const Certifications = () => {
   const { ref, isVisible } = useScrollAnimation();
+
   const certifications = [
+     {
+      title: "Generative AI in AWS Bedrock",
+      issuer: "AWS",
+      date: "2025",
+      description:
+        "Mastered building generative AI workflows using AWS Bedrock foundation models for automation and text generation.",
+      link: AWS_BEDROCK,
+    },
     {
       title: "Full Stack Developer Internship",
       issuer: "Cortexis Solution Hub",
       date: "Aug 2025 - Sep 2025",
       description:
         "Completed an intensive internship developing 9+ full-stack projects using MERN stack and modern development practices.",
-      link: "/certificates/cortexis.pdf",
+      link: "", // no certificate yet
     },
     {
       title: "MERN Stack Developer Internship",
@@ -20,48 +38,52 @@ const Certifications = () => {
       date: "Mar 2025 - May 2025",
       description:
         "Specialized in building responsive web interfaces and backend systems with MERN stack technologies.",
-      link: "/certificates/developerscohub.pdf",
+      link: fullstack_internship,
     },
+       {
+      title: "Data Analytics Certificate",
+      issuer: "Analytix Camp",
+      date: "2025",
+      description:
+        "Focused on data visualization, Excel analytics, and business insight generation for decision making.",
+      link: dataanalytics_certificate,
+    },
+      {
+      title: "Data Science Certificate",
+      issuer: "Udemy",
+      date: "2024",
+      description:
+        "Learned machine learning algorithms, data preprocessing, and model evaluation techniques using Python and Scikit-learn.",
+      link: datascience_certificate,
+    },
+ 
     {
       title: "PEL Internship Certificate",
       issuer: "PEL (Pak Elektron Limited)",
       date: "Aug 2024 - Oct 2024",
       description:
         "Contributed to a full-stack eCommerce web application with authentication, cart functionality, and admin dashboard.",
-      link: "/certificates/pel.pdf",
+      link: CERTIFICATE,
     },
-    {
-      title: "Generative AI in AWS Bedrock",
-      issuer: "AWS",
-      date: "2024",
-      description:
-        "Mastered building generative AI workflows using AWS Bedrock foundation models for automation and text generation.",
-      link: "/certificates/aws.pdf",
-    },
-    {
+     {
       title: "MERN Stack Development",
       issuer: "Knowledge Gate",
       date: "2024",
       description:
         "Comprehensive certification in MongoDB, Express.js, React.js, and Node.js full-stack development.",
-      link: "/certificates/knowledgegate.pdf",
+      link: javascipt_certificate,
     },
+   
     {
-      title: "Data Science Certificate",
-      issuer: "Udemy",
-      date: "2023 - 2024",
-      description:
-        "Learned machine learning algorithms, data preprocessing, and model evaluation techniques using Python and Scikit-learn.",
-      link: "/certificates/udemy.pdf",
-    },
-    {
-      title: "Data Analytics Certificate",
-      issuer: "Analytix Camp",
+      title: "AI Course Certificate",
+      issuer: "CORVIT Institute",
       date: "2023",
       description:
-        "Focused on data visualization, Excel analytics, and business insight generation for decision making.",
-      link: "/certificates/analytixcamp.pdf",
+        "Successfully completed Artificial Intelligence training focused on deep learning, NLP, and automation fundamentals.",
+      link: CORVIT,
     },
+   
+  
   ];
 
   return (
@@ -104,14 +126,26 @@ const Certifications = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-foreground/80 mb-4">{cert.description}</p>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-primary hover:text-primary/80"
-                  onClick={() => window.open(cert.link, "_blank")}
-                >
-                  View Certificate <ExternalLink size={16} className="ml-2" />
-                </Button>
+
+                {cert.link ? (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-primary hover:text-primary/80"
+                    onClick={() => window.open(cert.link, "_blank")}
+                  >
+                    View Certificate <ExternalLink size={16} className="ml-2" />
+                  </Button>
+                ) : (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    disabled
+                    className="text-gray-400 cursor-not-allowed"
+                  >
+                    Not Available
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
