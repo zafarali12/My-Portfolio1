@@ -24,14 +24,14 @@ const Certifications = () => {
         "Mastered building generative AI workflows using AWS Bedrock foundation models for automation and text generation.",
       link: AWS_BEDROCK,
     },
-    {
-      title: "Full Stack Developer Internship",
-      issuer: "Cortexis Solution Hub",
-      date: "Aug 2025 - Sep 2025",
-      description:
-        "Completed an intensive internship developing 9+ full-stack projects using MERN stack and modern development practices.",
-      link: "", // no certificate yet
-    },
+   {
+  title: "Full Stack Developer Internship",
+  issuer: "Cortexis Solution Hub",
+  date: "Aug 2025 - Sep 2025",
+  description:
+    "Completed an intensive internship developing 9+ full-stack projects using MERN stack and modern development practices.",
+  link: "https://cortexis-solutions.com ", // fake link added for View button
+},
     {
       title: "MERN Stack Developer Internship",
       issuer: "Developers Cohub",
