@@ -26,7 +26,7 @@ const Skills = () => {
         { name: "Express.js", level: "Strong" },
         { name: "REST APIs", level: "Good" },
         { name: "Authentication", level: "Good" },
-        { name: "NestJS", level: "Good" }
+        { name: "Next.js", level: "Good" }
       ],
     },
     {
