@@ -7,6 +7,15 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Projects = () => {
   const { ref, isVisible } = useScrollAnimation();
   const projects = [
+        {
+      title: "Next.js Full Stack Collaboration Platform",
+      description:
+        "Developed a real-time collaboration platform addressing the 'Silent Contributor' problem — enabling teams across languages, hierarchies, and time zones to communicate efficiently. Built with Next.js 14, Prisma, PostgreSQL, and modern authentication.",
+      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Auth.js"],
+      github: "https://github.com/zafarali12", // replace with actual repo if public
+      demo: "#", // replace with deployed link if available
+    },
+
     {
       title: "Wanderlust Travel Platform",
       description: "Airbnb-style web application with authentication, property listings, hotel reviews, and booking system. Features clean UI with dynamic functionality and database integration.",

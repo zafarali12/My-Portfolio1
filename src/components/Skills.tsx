@@ -14,6 +14,8 @@ const Skills = () => {
         { name: "CSS3", level: "Strong" },
         { name: "JavaScript", level: "Strong" },
         { name: "Bootstrap", level: "Good" },
+        { name: "Tailwind CSS", level: "Good" },
+        { name: "TypeScript", level: "Good" }
       ],
     },
     {
@@ -23,6 +25,8 @@ const Skills = () => {
         { name: "Node.js", level: "Strong" },
         { name: "Express.js", level: "Strong" },
         { name: "REST APIs", level: "Good" },
+        { name: "Authentication", level: "Good" },
+        { name: "NestJS", level: "Good" }
       ],
     },
     {
@@ -31,6 +35,7 @@ const Skills = () => {
       skills: [
         { name: "MongoDB", level: "Good" },
         { name: "Database Design", level: "Good" },
+        { name: "PostgreSQL", level: "Good" },
       ],
     },
     {
