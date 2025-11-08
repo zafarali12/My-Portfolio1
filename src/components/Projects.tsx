@@ -11,7 +11,7 @@ const Projects = () => {
       title: "Next.js Full Stack Collaboration Platform",
       description:
         "Developed a real-time collaboration platform addressing the 'Silent Contributor' problem — enabling teams across languages, hierarchies, and time zones to communicate efficiently. Built with Next.js 14, Prisma, PostgreSQL, and modern authentication.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "Auth.js"],
+      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Auth.js"],
       github: "https://github.com/zafarali12", // replace with actual repo if public
       demo: "#", // replace with deployed link if available
     },
