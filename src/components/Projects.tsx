@@ -7,14 +7,15 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const Projects = () => {
   const { ref, isVisible } = useScrollAnimation();
   const projects = [
-        {
-      title: "Next.js Full Stack Collaboration Platform",
-      description:
-        "Developed a real-time collaboration platform addressing the 'Silent Contributor' problem — enabling teams across languages, hierarchies, and time zones to communicate efficiently. Built with Next.js 14, Prisma, PostgreSQL, and modern authentication.",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Auth.js"],
-      github: "https://github.com/zafarali12", // replace with actual repo if public
-      demo: "#", // replace with deployed link if available
+       {
+  title: "Next.js Full Stack Collaboration Platform",
+  description:
+    "Built a production-level full-stack app with NextAuth.js authentication, MongoDB, Cloudinary image uploads, and a modern Next.js App Router structure. Users can sign up, log in, manage profiles (name/photo), and log out securely following best practices (SSR/SSG).",
+  technologies: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "NextAuth.js"],
+  github: "https://github.com/zafarali12", 
+  demo: "#",
     },
+
 
     {
       title: "Wanderlust Travel Platform",

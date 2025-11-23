@@ -13,6 +13,7 @@ const Testimonials = () => {
       content: "Zafar delivered an exceptional MERN stack application that exceeded our expectations. His attention to detail and problem-solving skills are outstanding.",
       rating: 5,
     },
+     
     {
       name: "Michael Chen",
       role: "CTO",
